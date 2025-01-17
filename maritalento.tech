@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action="/">
+<label for="fname">Primeiro nome:</label><br>
+<inputtype="text" id="fname" name="fname" value="Mariana"><br>
+<label for="1name">Sobrenome:</label><br>
+<inputtype="text"id="lname" name="lname" value="Flores"><br><br>
+<input type="submit" value="Confirmar">
+</form>
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action  page.php".</p>
