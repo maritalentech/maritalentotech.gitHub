@@ -1,0 +1,14 @@
+jogo_velha
+importar 'pacote:flutter/material.dart';
+
+vazio main() { runApp(MeuAplicativo()); }
+
+classe MyApp estende StatelessWidget { @override Widget build(BuildContext context) { return MaterialApp( home: Scaffold( appBar: AppBar( title: Text('Jogo da Velha'), ), body: TicTacToe(), ), ); } }
+
+classe TicTacToe estende StatefulWidget { @override _TicTacToeState createState() => _TicTacToeState(); }
+
+classe _TicTacToeState estende Estado { Lista quadro = Lista.preenchido(9, ''); String currentPlayer = 'X';
+
+void _handleTap(int índice) { if (board[índice] == '') { setState(() { board[índice] = jogadoratual; jogadoratual = jogadora atual == 'X' ? 'O' : 'X'; }); } }
+
+@override Widget build(BuildContext context) { return GridView.builder( gridDelegate: SliverGridDelegateWithFixedCrossAxisCount( crossAxisCount: 3, ), itemBuilder: (contexto, índice) { return GestureDetector( onTap: () => _handleTap(índice), filho: Container( decoração: BoxDecoration( borda: Border.all(), ), filho: Center( filho: Text( board[índice], estilo: TextStyle(tamanhodafonte: 32), ), ), ), ); }, itemCount: 9, ); } }
